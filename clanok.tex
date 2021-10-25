@@ -1,22 +1,48 @@
-% Metódy inžinierskej práce
-%? Okolo 5 stran
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Define Article %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[10pt,twoside,slovak,a4paper]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[slovak]{babel}
-%\usepackage[T1]{fontenc}
-\usepackage[IL2]{fontenc} % lepšia sadzba písmena Ľ než v T1
+\usepackage[IL2]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-\usepackage{url} % príkaz \url na formátovanie URL
+\usepackage{url}
 \usepackage{hyperref} % odkazy v texte budú aktívne (pri niektorých triedach dokumentov spôsobuje posun textu)
-
+\usepackage{float}
 \usepackage{cite}
-%\usepackage{times}
+\usepackage{times}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{amsthm}
+\usepackage{empheq}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\usepackage{color}
+\usepackage{psfrag}
+\usepackage{pgfplots}
+\usepackage{bm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Plotting Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepgfplotslibrary{colorbrewer}
+\pgfplotsset{width=8cm,compat=1.9}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%? Okolo 5 stran
+%TODO Fixnut odsadenie textu
+%TODO Opravit alebo odstranit cisla v zahlavy stran
+%TODO Pridať obsah článku
+%TODO Preložiť texty do latex templatu?
 
 \pagestyle{headings}
+\raggedbottom
 
-\title{Kultúrny model pre správanie nehrateľných postav v počítačových hrách\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak\@. rok 2021/22, vedenie cvičení: Ing. Fedor Lehocki, PhD.}} % meno a priezvisko vyučujúceho na cvičeniach
+\title{Kultúrny model pre správanie nehrateľných postav v počítačových hrách\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak\@. rok 2021/22, vedenie cvičení: Ing. Fedor Lehocki, PhD.}}
 
 \author{Martin Szabo\\[2pt]
 	{\small Slovenská technická univerzita v Bratislave}\\
@@ -24,7 +50,7 @@
 	{\small \texttt{xszabom5@stuba.sk}}
 	}
 
-\date{\small 4.\ október 2021} % upravte
+\date{\small 4.\ október 2021}
 
 \begin{document}
 
@@ -63,19 +89,52 @@ postav v hernom svete.
 
 \section{Základne modely a pojmy}\label{zaklad}
 
-Základne modely z ktorých bude tento model vychádzať primárne z Plutchikoveho kolesa emocií.
+Základne modely z ktorých bude tento model vychádzať primárne z Plutchikoveho kolesa emócií
+(Obr.~\ref{fig:EWheel}). Emócie sú stavy ktoré sa odohrávajú v našom nervovom systéme. Sú to chemické
+procesy ktoré súvisia s našim správaním, pocitmi a myšlienkami. Existuje veľa teórií ktoré sa snažia
+vysvetliť ako emócie súvisia s osobnosťou. Pre tento model najlepšie funguje práve teória Jamesa Langeho.
+Jeho teória naznačuje že emócie sú výsledkom fyziologických reakcií na podnety a udalosti. Taktiež existuje
+teória Paula Ekmana ktorý definuje emócie ako diskrétne, merateľné a z psychologického hľadiska
+rozdielne, definoval 6 základných emócií:
 
+\begin{enumerate}
+	\item Hnev
+	\item Znechutenie
+	\item Strach
+	\item Šťastie
+	\item Smútok
+	\item Prekvapenie
+\end{enumerate}
 
+Robert Plutchik rozšíril teóriu Ekmana a vytvoril tzv. Koleso Emócií. V tejto teórií je 8
+emočných sektorov s troma úrovňami intenzity pre každú emóciu. Napríklad žltá os má najnižšie
+emóciu pokoj. V strede má radosť a najvyššie má extázu Jednotlivé emócie sa môžu v tomto modeli
+aj miešať. Miešanie emócií majú rôzne úrovne:
 
+\begin{itemize}
+	\item Primárne (často viditeľné)
+	\item Sekundárne (občas viditeľné)
+	\item Terciárna (zriedka viditeľné)
+	\item Opačné (neviditeľné)
+\end{itemize}
 
-Z obr.~\ref{f:rozhod} je všetko jasné. 
+Dobrý príkladom kombinácie emócií na primárnej úrovni sú radosť a dôvera.
+Kombináciou týchto dvoch emócií dostaneme lásku. Príklad sekundárnej kombinácie
+emócií je radosť a strach z ktorých nám vznikne vzrušenie. Terciárna kombinácia
+emócií môže byť napríklad radosť a prekvapenie z ktorých nám vyplýva potešenie.
 
-\begin{figure*}[tbh]
-\centering
-%\includegraphics[scale=1.0]{diagram.pdf}
-Aj text môže byť prezentovaný ako obrázok. Stane sa z neho označný plávajúci objekt. Po vytvorení diagramu zrušte znak \texttt{\%} pred príkazom \verb|\includegraphics| označte tento riadok ako komentár (tiež pomocou znaku \texttt{\%}).
-\caption{Rozhodujúci argument.}\label{f:rozhod}
-\end{figure*}
+%TODO Preložiť obrázok do slovenčiny
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.34]{Obrázky/Plutchik_wheel.png}
+		\caption{Plutchikové koleso emócií}
+		\label{fig:EWheel}
+\end{figure}
+
+%TODO pridat "\pagebreak" ?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Zvyšok Šablony %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Iná časť}\label{ina}
 
