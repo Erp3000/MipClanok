@@ -42,20 +42,21 @@
 \pagestyle{headings}
 \raggedbottom
 
-\title{Kultúrny model pre správanie nehrateľných postav v počítačových hrách\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak\@. rok 2021/22, vedenie cvičení: Ing. Fedor Lehocki, PhD.}}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Autor %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Kultúrny model pre správanie nehrateľných postav v počítačových hrách\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak\@. rok 2021/22, vedenie cvičení: Ing. Fedor Lehocki, PhD.}}
 \author{Martin Szabo\\[2pt]
 	{\small Slovenská technická univerzita v Bratislave}\\
 	{\small Fakulta informatiky a informačných technológií}\\
 	{\small \texttt{xszabom5@stuba.sk}}
 	}
-
 \date{\small 4.\ október 2021}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Abstrakt %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
 \maketitle
-
 \begin{abstract}
 
 Počítačové hry sa často snažia čo najbližšie priblížiť realite. Veľa hier sa snaží priblížiť realite práve tým že 
@@ -66,7 +67,10 @@ myslí a žije aj keď je to len pár pixelov v počítačovej hre. Model ktorý
 možnosti ako modelovať realistickejší vzor správania.
 
 \end{abstract}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Úvod %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Úvod}
 
 Herný priemysel je jeden z najpopulárnejších a najrýchlejšie rastúcich priemyslov.
@@ -86,7 +90,9 @@ sa bude usilovať o simuláciu reálnej mysle človeka a následne bude z neho v
 postav v hernom svete.
 
 %TODO popis štruktúry dokumentu
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Základne modely a pojmy %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Základne modely a pojmy}\label{zaklad}
 
 Základne modely z ktorých bude tento model vychádzať primárne z Plutchikoveho kolesa emócií
@@ -132,50 +138,152 @@ emócií môže byť napríklad radosť a prekvapenie z ktorých nám vyplýva p
 		\label{fig:EWheel}
 \end{figure}
 
-%TODO pridat "\pagebreak" ?
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Zvyšok Šablony %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Proxemika %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Proxemika}\label{proxemika}
 
-\section{Iná časť}\label{ina}
+Proxemika je vedna disciplína ktorá sa zaobera tým ako ľudia využívajú priestor v
+socialnej komunikácií a aký to má dopad na správanie členov komunikácie. Edward T. Hall,
+vyznmaný antropológ ktorý v svojej práci o proxemike ju definoval ako "Pozorovania a teórie % TODO Správne citovať
+ľudi používajúci priesto ako špecializované vypracovanie kultúry". Proxemika nie je dôležitá
+len v komunikácie ale v širom ponímani aj v organizácií priestoru.
 
-Základným problémom je teda\ldots{} Najprv sa pozrieme na nejaké vysvetlenie (časť~\ref{ina:nejake}), a potom na ešte nejaké (časť~\ref{ina:nejake}).\footnote{Niekedy môžete potrebovať aj poznámku pod čiarou.}
+\subsection{Ako funguje proxemika}\label{proxemika:funkcnost}
 
-%Môže sa zdať, že problém vlastne nejestvuje\cite{Coplien:MPD}, ale bolo dokázané, že to tak nie je~\cite{Czarnecki:Staged, Czarnecki:Progress}. Napriek tomu, aj dnes na webe narazíme na všelijaké pochybné názory\cite{PLP-Framework}. Dôležité veci možno \emph{zdôrazniť kurzívou}.
-Citácia vyzerá asi takto~\cite{Bicalho2020}
-\subsection{Nejaké vysvetlenie}\label{ina:nejake}
-
-Niekedy treba uviesť zoznam:
-
-\begin{itemize}
-\item jedna vec
-\item druhá vec
-	\begin{itemize}
-	\item x
-	\item y
-	\end{itemize}
-\end{itemize}
-
-Ten istý zoznam, len číslovaný:
+Proxemika v socialnej komunikácií je osobná zóna, ktorá obklopuje každého človeka. Vieme si ju
+predstaviť ako fiktívnu bublinu. Od ľudí ktorý sú nám nesympatickí si držíme inú vzdialenosti ako
+od neznámych.Najmenej sa odťahujeme od detí, rodiny, priateľov alebo veľmi blízkych ľudí. Podľa
+toho môžeme priestor okolo nás rozdeliť na tieto zóny:
 
 \begin{enumerate}
-\item jedna vec
-\item druhá vec
-	\begin{enumerate}
-	\item x
-	\item y
-	\end{enumerate}
+	\item Intímna zóna - je dotykový kontakt, to znamená, že je typická pre blízky kontakt do 30 cm (napr. matka - dieťa, milenci, blízki priatelia), oznamujeme v nej osobné, prípadne až intímne informácie.
+	\item Osobná zóna - hranica vzdialenosti 40 - 80 cm pre priateľov, s cudzím človekom 45 - 120 cm (napr. dobrý očný kontakt,  podanie ruky).
+	\item Sociálna zóna - partneri nie sú osobne zaujatí, 120 - 360 cm (narp. obchodné jednanie, služobný kontakt). Je to dobrý kontakt, ale je vhodné zvýšiť hlas.
+	\item Verejná zóna - začína pri 360 a končí približne pri 760 cm (napr. herec, učiteľ na prednáške), vôbec nie je vhodná na osobnú, intímnu komunikáciu, nevidno na ústa ani do očí a je potrebné hovoriť hlasnejšie.
 \end{enumerate}
 
-\subsection{Ešte nejaké vysvetlenie}\label{ina:este}
+Fungovanie tohto princípu je ovplyvnené aj osobnosťou jednotlivca. Vzdialenosti jednotlivých
+zón sú preto vždy v určitom rozsahu. Najviac sme citliví na narušenie intímnej a osobnej zóny
+nevhodnými ľuďmi, presne podľa popisu, čo môže vyvolať prekvapivé reakcie.
 
-\paragraph{Veľmi dôležitá poznámka.}
-Niekedy je potrebné nadpisom označiť odsek. Text pokračuje hneď za nadpisom.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.34]{Obrázky/Proxemics.png}
+	\caption{Proxemika (Osobný priestor)}
+	\label{fig:proxemics}
+\end{figure}
 
-\section{Dôležitá časť}\label{dolezita}
 
-\section{Ešte dôležitejšia časť}\label{dolezitejsia}
+\subsection{Ako využijeme poznatky z proxemiky v modeli}\label{proxemika:poznatky}
 
-\section{Záver}\label{zaver} % prípadne iný variant názvu
+Definíciu Edwarda T. Halla využijeme v tomto modeli lebo proxemika v hrách určuje ako reagujú
+ostatné postavy keď sa k ním priblížite do ich osobného priestoru ale aj ako sú mestá v hrách
+postavené. Proxemiku ako takú však ale môžeme využiť pri mnohých oblastiach vývoja počítačových
+hier.
+
+%\paragraph{Veľmi dôležitá poznámka.} % TODO remove
+%Niekedy je potrebné nadpisom označiť odsek. Text pokračuje hneď za nadpisom. % TODO remove
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Kultúrne dimenzie %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Kultúrne dimenzie}\label{kultura} 
+
+Kultúrne dimenzie definoval holandský vedec Geert Hofstede ako "Kolektívne programovanie mysle, % TODO správne citovať
+ktoré odlišuje členov jednej skupiny alebo kategórie ľudí od ostatných". Keďže v našom modeli
+potrebujeme reprezentovať kultúru v hre dimenzie definované v tejto teórií vieme použiť v našom
+modeli efektívne. Táto teória ponúka 6 základných kultúrnych dimenzií.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.34]{Obrázky/Cultural_dimensions.png}
+	\caption{Základné kultúrne dimenzie}
+	\label{fig:kultura}
+\end{figure}
+
+\subsection{Distribúcia moci}\label{kultura:moc}
+
+Distribúcia moci znamená, do akej miery menej mocný členovia inštitúcií a organizácií v
+rámci krajiny očakávajú a akceptujú, že moc v krajine je nerovnomerne distribuovaná. Tato
+vlastnosť je rozdielna od krajiny v ktorej sa jedinec nachádza. Pokiaľ sa líšia očakávania
+jedinca od reality tak v ňom vznikajú pochyby. Pokiaľ je takýchto jedincov viac vznikajú
+nepokoje v celej kultúre resp. v celej krajine.
+
+\subsection{Individualizmus a kolektivizmus}\label{kultura:etika}
+
+Individualizmus znamená že v spoločnosti sú vzťahy medzi jednotlivcami voľnejšie. Znamená
+to že od jednotlivca sa očakáva že sa bude starať sám o seba a o svoju rodinu. Kolektivizmus
+znamená že jednotlivec je od narodenia zaradený do spoločnosti ktorá ho počas života ochraňuje
+výmenou za lojálnosť voči spoločnosti v ktorej sa narodil.
+
+\subsection{Maskulinita a Feminita}\label{kultura:masfem}
+
+Maskulinita a Feminita sú v spoločnosti, v ktorej emocionálne rodové role sú jasne odlišné: 
+muži majú byť asertívny, tvrdý a zameraný na materiálny úspech, zatiaľ čo ženy majú
+byť skromnejšie a zaoberajúc sa kvalitou život. Feminidita, znamená spoločnosť, v ktorej
+sa prekrývajú emocionálne roly pohlavia: muži aj ženy majú byť skromný a zaoberajúc
+sa kvalitou života.
+
+\subsection{Vyhýbanie sa neznámeho}\label{kultura:vyhybanie}
+
+Vyhýbania sa neznámeho v spoločnosti väčšinou znamená do akej miery sa členovia spoločnosti
+cítia ohrozený neznámymi situáciami. Spoločnosti ktoré sa do veľkej miery boja neznámeho
+maju väčšinou striktné pravidla správania, zákony, a usmernenia. Takéto spoločnosti sa spoliehajú
+na absolútnu pravdu a vieru v to že pravdivosť jedinca ovplyvňuje všetko okolo neho. Spoločnosti
+ktoré sa iba do menšej miery boja neznámeho nemá toľko striktných pravidiel, jedinec sa cíti
+slobodnejší. Rozličné názory sú akceptovateľnejšie v takejto spoločnosti.
+
+\subsection{Dlhodobá a krátkodobá orientácia kultúry}\label{kultura:cnosti}
+
+Dlhodobá orientácia je podpora cností zameraných na odmeny v budúcnosti, najmä vytrvalosť a šetrnosť.
+Tieto cnosti pomáhajú zlepšovať jedinca a skrz neho aj spoločnosť ako takú. Krátkodobá orientácia
+znamená podporovanie cností súvisiacich s minulými a prítomnými najmä rešpektovaním tradície, ochrany
+tváre a plnenie sociálnych záväzkov.
+
+\subsection{Zhovievavosť a zdržanlivosť kultúry}\label{kultura:obmedzenia}
+
+Zhovievavosť a zdržanlivosť kultúry znamená úroveň slobody, ktoré spoločenské normy
+dávajú občanom pri plnení svojich ľudských túžob. Zhovievavá spoločnosť je definovaná
+ako spoločnosť ktorá umožňuje voľné plnenie základných ľudských túžob ktoré súvisia s
+užívaním si života. Zdržanlivosť je opak zhovievavosti. Zdržanlivá spoločnosť je taká
+ktorá kontroluje plnenie základných ľudských túžob pomocou striktných sociálnych noriem.
+
+% TODO gramatika
+
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Kultúrny model %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Kultúrny model}\label{reakcie}
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Meranie emocií %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Meranie emocií}\label{meranie}
+
+\subsection{Meranie emócií pomocou teórie Paula Ekmana}\label{meranie:ekman}
+\subsection{Reprezentácia emocie v našom modele}\label{meranie:reperezentacia}
+
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Emočné reakcie na udalosti %%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Emočné reakcie na udalosti}\label{reakcie}
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Záver %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Záver}\label{zaver} % Zhrnutie problematiky a modelu
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Literatúra %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%časť~\ref{zaklad}), a potom na ešte nejaké (časť~\ref{zaklad}).\footnote{Niekedy môžete potrebovať aj poznámku pod čiarou.}Hall zdôrazdňoval vplyv proxemiky na socialnú komunikáciu. % TODO remove
+%Základným problémom je teda\ldots{} Najprv sa pozrieme na nejaké vysvetlenie ( % TODO remove
+%Môže sa zdať, že problém vlastne nejestvuje\cite{Coplien:MPD}, ale bolo dokázané, že to tak nie je~\cite{Czarnecki:Staged, Czarnecki:Progress}. Napriek tomu, aj dnes na webe narazíme na všelijaké pochybné názory\cite{PLP-Framework}. Dôležité veci možno \emph{zdôrazniť kurzívou}. % TODO remove
+Citácia vyzerá asi takto~\cite{Bicalho2020} % TODO remove
 
 %\acknowledgement{Ak niekomu chcete poďakovať\ldots}
 
@@ -183,3 +291,4 @@ Niekedy je potrebné nadpisom označiť odsek. Text pokračuje hneď za nadpisom
 \bibliography{literatura}
 \bibliographystyle{plain} % prípadne alpha, abbrv alebo hociktorý iný
 \end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
