@@ -26,6 +26,7 @@
 \usepackage{psfrag}
 \usepackage{pgfplots}
 \usepackage{bm}
+\usepackage{tabularx}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Nastavenia Strany %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -33,13 +34,8 @@
 \pgfplotsset{width=8cm,compat=1.9}
 \pagestyle{headings}
 \raggedbottom
+\newcolumntype{x}[1]{>{\centering\arraybackslash}X{#1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%? Okolo 5 stran
-%TODO Fixnut odsadenie textu
-%TODO Opravit alebo odstranit cisla v zahlavy stran
-%TODO Dopísať sekcie
-%TODO Gramatika
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Autor %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Kultúrny model pre správanie nehrateľných postav v počítačových hrách\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak\@. rok 2021/22, vedenie cvičení: Ing. Fedor Lehocki, PhD.}}
@@ -131,12 +127,24 @@ predstaviť ako fiktívnu bublinu. Od ľudí ktorý sú nám nesympatickí si dr
 od neznámych.Najmenej sa odťahujeme od detí, rodiny, priateľov alebo veľmi blízkych ľudí. Podľa
 toho môžeme priestor okolo nás rozdeliť na tieto zóny.
 
-\begin{enumerate}
-	\item Intímna zóna (Intimate) - je dotykový kontakt, to znamená, že je typická pre blízky kontakt do 30 cm (napr. matka - dieťa, milenci, blízki priatelia), oznamujeme v nej osobné, prípadne až intímne informácie.
-	\item Osobná zóna (Personal) - hranica vzdialenosti 40 - 80 cm pre priateľov, s cudzím človekom 45 - 120 cm (napr. dobrý očný kontakt,  podanie ruky).
-	\item Sociálna zóna (Social) - partneri nie sú osobne zaujatí, 120 - 360 cm (narp. obchodné jednanie, služobný kontakt). Je to dobrý kontakt, ale je vhodné zvýšiť hlas.
-	\item Verejná zóna (Public) - začína pri 360 a končí približne pri 760 cm (napr. herec, učiteľ na prednáške), vôbec nie je vhodná na osobnú, intímnu komunikáciu, nevidno na ústa ani do očí a je potrebné hovoriť hlasnejšie.
-\end{enumerate}
+\begin{table}[H]
+	\centering
+	\resizebox{0.85\textwidth}{!}{
+		\begin{tabularx}{\linewidth}{ |x|x|x|x| }
+			\hline
+				Typ zóny & Popis zóny & Vzdialenosť zóny & Príklad \\
+			\hline
+				Intímna zóna & Je typická pre blízky kontakt. & do 30 cm & matka - dieťa, milenci, blízki priatelia \\
+			\hline	
+				Osobná zóna & Vzdialenosti pre priateľov a cudzích ľudí & 40 - 80 cm pre priateľov, s cudzím človekom 45 - 120 cm & Dobrý očný kontakt, podanie ruky \\
+			\hline	
+				Sociálna zóna & Partneri nie sú osobne zaujatí, je vhodné zvýšiť hlas. & 120 - 360 cm & Obchodné jednanie, služobný kontakt \\
+			\hline
+				Verejná zóna & Nevidno na ústa ani do očí a je potrebné hovoriť hlasnejšie. & začína pri 360 a končí približne pri 760 cm & herec, učiteľ na prednáške \\                                          
+			\hline
+		\end{tabularx}
+	}
+\end{table}
 
 Fungovanie tohto princípu je ovplyvnené aj osobnosťou jednotlivca. Vzdialenosti jednotlivých
 zón sú preto vždy v určitom rozsahu. Najviac sme citliví na narušenie intímnej a osobnej zóny
@@ -229,15 +237,15 @@ kultúru podla ktorej sa bude správať. Každá z dimenzií preberaných bude m
 
 Každá nehrateľná postava bude mať určitý vzťah k iným postavám. Tento vzťah budú
 určovať rôzne aspekty ako: Národnosť, Postavenie, Viera, Minulé skúsenosti.
-Každá interakcia bude závisieť od rôznych elementov od postavenia po náladú NPC
+Každá interakcia bude závisieť od rôznych elementov od postavenia po náladu NPC
 a to vytvorí dojem reálneho sveta. Postava bude na sebe mať atribúty ktoré budú pomocou kolesa emócií
 (Obr.~\ref{fig:EWheel}). určovať to ako sa bude správať a budú môcť miešať napr. NPC môže mať hodnotu
 Radosti na 75\% a Dôvery na 25\%. Tým pádom jeho výsledná emócia bude Láska a tá by ovplyvnila jeho
-správanie k hráčovi tak že by reagoval priateľký voči nemu pokiaľ je z rovnakej kultúrnej dimenzie.
+správanie k hráčovi tak že by reagoval priateľky voči nemu pokiaľ je z rovnakej kultúrnej dimenzie.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.41]{Diagramy/Spravanie.png}
+	\includegraphics[scale=0.4]{Diagramy/Spravanie.png}
 	\caption{Príklad interakcie hráča s NPC}
 	\label{fig:interaction}
 \end{figure}
@@ -255,25 +263,35 @@ hráča hra zaujala. Osobnosti sa môžu líšiť ale sú v súlade s kultúrnym
 a, úrovňou predsudkov. Týmto vytvárame viac možných interakcií a prekvapujúce výsledky situácií
 v ktorých sa hráč ocitne. Túto tému môjho článku som zvolil na základe týchto článkov
 \cite{culturenpc} a \cite{emotions2017npc}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%% Vyjadenie k témam na prednáškach %%%%%%%%%%%%%%%%%%%%%%%
 \section{Vyjadenie k témam na prednáškach}
 
-% TODO vyjadriť sa k 3 témam prednášok
 \subsection{Spoločenské súvislosti informatiky}
 
-\paragraph{Spoločenské súvislosti.} 
+\paragraph{Spoločenské súvislosti.}  V dnešnej dobe je prístup k informáciám takmer neobmedzený.
+Všetko na čo si človek zmyslí si vie dohľadať a naučiť sa na profesionálnej úrovni aj s dokladom
+o jeho novonadobudnutých vedomostiach. No v dnešnej dobe je prominentná aj umelá inteligencia na
+automatizovanie rôznych úloh od jednoduchú identifikáciu objektov reálneho sveta cez doplňovanie
+kódu pri programovaní až po ovládanie veľkých strojov pri priemyselnej výrobe. Tato forma inteligencie
+sa však dá aj využiť v hrách kde má za úlohu simulovať správanie ľudí v reálnom svete. Tento model je
+navrhnutý tak aby čo najlepšie vedel priblížiť umelú inteligenciu resp. NPC v hrách k reálnemu svetu.
 
 \subsection{Technológia a ľudia}
 
-\paragraph{Technológia a ľudia.} 
+\paragraph{Technológia a ľudia.} Ľudia vymysleli technológie aby si uľahčili náročnú alebo repetetívnu
+prácu ktorú za nich môže vykonať stroj. V dnešnej dobe to pokročilo do takej miery že technológia nie len
+pomáha človeku zjednodušiť si prácu ale priam ho nahradiť. Preto je v dnešnej dobe je potrebné naučiť sa
+pracovať aspoň s základnými informačnými technológiami pre rôzne aspekty nášho života.
 
 \subsection{Udržateľnosť a etika}
 
-\paragraph{Udržateľnosť a etika.} 
-
+\paragraph{Udržateľnosť a etika.} Umelá inteligencia má vývoj ktorý sa dá udržiavať a zlepšovať.
+Príklad u NPC z tohto modelu by bola možnosť prejavovať iba primárne emócie a bez možnosti miešania
+emócií. Ale postupným vývoj hry by mohli zlepšovať umelú inteligenciu do takej miery aby vedela prejaviť
+aj sekundárne a terciárne emócie. Taktiež by sme mohli rozširovať paletu reakcií v jednotlivých emočných
+sektorov.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Literatúra %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
