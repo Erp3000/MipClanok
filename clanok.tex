@@ -38,8 +38,8 @@
 %? Okolo 5 stran
 %TODO Fixnut odsadenie textu
 %TODO Opravit alebo odstranit cisla v zahlavy stran
-%TODO Pridať obsah článku
 %TODO Dopísať sekcie
+%TODO Gramatika
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Autor %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Kultúrny model pre správanie nehrateľných postav v počítačových hrách\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak\@. rok 2021/22, vedenie cvičení: Ing. Fedor Lehocki, PhD.}}
@@ -86,7 +86,6 @@ postáv a bude môcť prejavovať široké spektrum emócií rovnako ako to je a
 môcť usúdiť na základe správania hráča a iných nehrateľných postav okolo nej jej vzťah k nim. Tento model
 sa bude usilovať o simuláciu reálnej mysle človeka a následne bude z neho vyplývať správanie nehrateľných
 postav v hernom svete.
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%% Základne modely a pojmy %%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -95,45 +94,25 @@ postav v hernom svete.
 Základne modely z ktorých bude tento model vychádzať primárne z Plutchikoveho kolesa emócií
 (Obr.~\ref{fig:EWheel}). Emócie sú stavy ktoré sa odohrávajú v našom nervovom systéme. Sú to chemické
 procesy ktoré súvisia s našim správaním, pocitmi a myšlienkami. Existuje veľa teórií ktoré sa snažia
-vysvetliť ako emócie súvisia s osobnosťou. Pre tento model najlepšie funguje práve teória Jamesa Langeho.
-Jeho teória naznačuje že emócie sú výsledkom fyziologických reakcií na podnety a udalosti. Taktiež existuje
-teória Paula Ekmana ktorý definuje emócie ako diskrétne, merateľné a z psychologického hľadiska
-rozdielne, definoval 6 základných emócií:
-
-\begin{enumerate}
-	\item Hnev
-	\item Znechutenie
-	\item Strach
-	\item Šťastie
-	\item Smútok
-	\item Prekvapenie
-\end{enumerate}
-
-Robert Plutchik rozšíril teóriu Ekmana a vytvoril tzv. Koleso Emócií. V tejto teórií je 8
+vysvetliť ako emócie súvisia s osobnosťou. Pre tento model najlepšie funguje práve teória Jamesa
+Langeho. Jeho teória naznačuje že emócie sú výsledkom fyziologických reakcií na podnety a udalosti.
+Taktiež existuje teória Paula Ekmana ktorý definuje emócie ako diskrétne, merateľné a z psychologického
+hľadiska rozdielne, definoval 6 základných emócií: Hnev, Znechutenie, Strach, Šťastie, Smútok a
+Prekvapenie. Robert Plutchik rozšíril teóriu Ekmana a vytvoril tzv. Koleso Emócií. V tejto teórií je 8
 emočných sektorov s troma úrovňami intenzity pre každú emóciu. Napríklad žltá os má najnižšie
 emóciu pokoj. V strede má radosť a najvyššie má extázu Jednotlivé emócie sa môžu v tomto modeli
-aj miešať. Miešanie emócií majú rôzne úrovne:
-
-\begin{itemize}
-	\item Primárne (často viditeľné)
-	\item Sekundárne (občas viditeľné)
-	\item Terciárna (zriedka viditeľné)
-	\item Opačné (neviditeľné)
-\end{itemize}
-
-Dobrý príkladom kombinácie emócií na primárnej úrovni sú radosť a dôvera.
-Kombináciou týchto dvoch emócií dostaneme lásku. Príklad sekundárnej kombinácie
-emócií je radosť a strach z ktorých nám vznikne vzrušenie. Terciárna kombinácia
+aj miešať. Miešanie emócií majú rôzne úrovne: Primárne (často viditeľné), Sekundárne (občas viditeľné),
+Terciárna (zriedka viditeľné), Opačné (neviditeľné) Dobrý príkladom kombinácie emócií na primárnej 
+úrovni sú radosť a dôvera. Kombináciou týchto dvoch emócií dostaneme lásku. Príklad sekundárnej
+kombinácie emócií je radosť a strach z ktorých nám vznikne vzrušenie. Terciárna kombinácia
 emócií môže byť napríklad radosť a prekvapenie z ktorých nám vyplýva potešenie.
 
 \begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.40]{Obrázky/Plutchikove_koleso.jpg}
+		\includegraphics[scale=0.2]{Obrázky/Plutchikove_koleso.jpg}
 		\caption{Plutchikové koleso emócií~\cite{emocie}}
 		\label{fig:EWheel}
 \end{figure}
-
-\pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Proxemika %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -150,7 +129,7 @@ len v komunikácie ale v širom ponímani aj v organizácií priestoru.
 Proxemika~\cite{proxemika} v socialnej komunikácií je osobná zóna, ktorá obklopuje každého človeka. Vieme si ju
 predstaviť ako fiktívnu bublinu. Od ľudí ktorý sú nám nesympatickí si držíme inú vzdialenosti ako
 od neznámych.Najmenej sa odťahujeme od detí, rodiny, priateľov alebo veľmi blízkych ľudí. Podľa
-toho môžeme priestor okolo nás rozdeliť na tieto zóny (Obr.~\ref{fig:proxemics}):
+toho môžeme priestor okolo nás rozdeliť na tieto zóny.
 
 \begin{enumerate}
 	\item Intímna zóna (Intimate) - je dotykový kontakt, to znamená, že je typická pre blízky kontakt do 30 cm (napr. matka - dieťa, milenci, blízki priatelia), oznamujeme v nej osobné, prípadne až intímne informácie.
@@ -162,23 +141,10 @@ toho môžeme priestor okolo nás rozdeliť na tieto zóny (Obr.~\ref{fig:proxem
 Fungovanie tohto princípu je ovplyvnené aj osobnosťou jednotlivca. Vzdialenosti jednotlivých
 zón sú preto vždy v určitom rozsahu. Najviac sme citliví na narušenie intímnej a osobnej zóny
 nevhodnými ľuďmi, presne podľa popisu, čo môže vyvolať prekvapivé reakcie.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.34]{Obrázky/Proxemics.png}
-	\caption{Proxemika~\cite{hall1966the} (Osobný priestor)}
-	\label{fig:proxemics}
-\end{figure}
-
-
-\subsection{Ako využijeme poznatky z proxemiky v modeli}\label{proxemika:poznatky}
-
 Definíciu Edwarda T. Halla využijeme v tomto modeli lebo proxemika v hrách určuje ako reagujú
 ostatné postavy keď sa k ním priblížite do ich osobného priestoru ale aj ako sú mestá v hrách
 postavené. Proxemiku ako takú však ale môžeme využiť pri mnohých oblastiach vývoja počítačových
 hier.
-
-\pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Kultúrne dimenzie %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -186,13 +152,13 @@ hier.
 
 Kultúrne dimenzie definoval holandský vedec Geert Hofstede ako \cite{hofstede2010cultures}
 ``Kolektívne programovanie mysle, ktoré odlišuje členov jednej skupiny alebo kategórie ľudí
-od ostatných''. Keďže v našom modeli potrebujeme reprezentovať kultúru v hre dimenzie definované
-v tejto teórií vieme použiť v našom modeli efektívne. Táto teória ponúka 6 základných kultúrnych
-dimenzií (Obr.~\ref{fig:culture}).
+od ostatných''. Keďže v našom modeli potrebujeme reprezentovať kultúru v hre a dimenzie definované
+v tejto teórií vieme použiť v našom modeli efektívne. Táto teória \cite{hall1966the} ponúka 6
+základných kultúrnych dimenzií (Obr.~\ref{fig:culture}).
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.34]{Obrázky/Cultural_dimensions.png}
+	\includegraphics[scale=0.15]{Obrázky/Cultural_dimensions.png}
 	\caption{Základné kultúrne dimenzie~\cite{hofstede2010cultures}}
 	\label{fig:culture}
 \end{figure}
@@ -243,57 +209,38 @@ dávajú občanom pri plnení svojich ľudských túžob. Zhovievavá spoločnos
 ako spoločnosť ktorá umožňuje voľné plnenie základných ľudských túžob ktoré súvisia s
 užívaním si života. Zdržanlivosť je opak zhovievavosti. Zdržanlivá spoločnosť je taká
 ktorá kontroluje plnenie základných ľudských túžob pomocou striktných sociálnych noriem.
-
-\pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Kultúrny model %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Kultúrny model}\label{model}
 
 Ladislau B\"{o}l\"{o}ni vo svojom výskume~\cite{computationalmodel2018} používal štyri
-základné metriky pre výpočet modelu sociálnych noriem. Tieto normy pozostávali z:
-
-\begin{itemize}
-	\item Čas
-	\item Slušnosť
-	\item Dôstojnosť
-	\item Bohatstvo
-\end{itemize}
-
-Aj keď v jeho výskume to bolo dostačujúce. V našom kontexte počítačových hier to nie je
-dostačujúce. Pre tento dôvod používame kultúrne dimenzie (sekcia~\ref{kultura}) ktoré vieme naviazať
-ku správaniu hráča v hernom svete. Následne pomocou Hofstedovej teórie~\cite{hofstede2010cultures}
-pridať element kolektivizmu a ``racionality'' aby sme počítali aj s emóciami. V našom modeli bude väčšina
-nehrateľných postav mať predurčenú kultúru podla ktorej sa bude správať. Každá z dimenzií preberaných
-bude mať hodnotu percentuálnu hodnotu reprezentovanú nasledovne.
-
-%TODO Spraviť z tohto tabulku?
-\begin{itemize}
-	\item 1 = 100\%
-	\item 0.9 = 90\%
-	\item 0.5 = 50\%
-	\item 0.1 = 10\%
-	\item 0.05 = 5\%
-	\item \dots
-\end{itemize}
-
-\pagebreak
+základné metriky pre výpočet modelu sociálnych noriem. Tieto normy pozostávali z: Čas, 
+Slušnosť, Dôstojnosť, Bohatstvo. Aj keď v jeho výskume to bolo dostačujúce. V našom kontexte 
+počítačových hier to nie je dostačujúce. Pre tento dôvod používame kultúrne dimenzie 
+(Sekcia~\ref{kultura}) ktoré vieme naviazať ku správaniu hráča v hernom svete. Následne 
+pomocou Hofstedovej teórie~\cite{hofstede2010cultures} pridať element kolektivizmu a ``racionality'' 
+aby sme počítali aj s emóciami. V našom modeli bude väčšina nehrateľných postav mať predurčenú 
+kultúru podla ktorej sa bude správať. Každá z dimenzií preberaných bude mať percentuálnu hodnotu.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%% Emočné reakcie na udalosti %%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Emočné reakcie na udalosti}\label{reakcie}
 
 Každá nehrateľná postava bude mať určitý vzťah k iným postavám. Tento vzťah budú
-určovať rôzne aspeky ako:
+určovať rôzne aspekty ako: Národnosť, Postavenie, Viera, Minulé skúsenosti.
+Každá interakcia bude závisieť od rôznych elementov od postavenia po náladú NPC
+a to vytvorí dojem reálneho sveta. Postava bude na sebe mať atribúty ktoré budú pomocou kolesa emócií
+(Obr.~\ref{fig:EWheel}). určovať to ako sa bude správať a budú môcť miešať napr. NPC môže mať hodnotu
+Radosti na 75\% a Dôvery na 25\%. Tým pádom jeho výsledná emócia bude Láska a tá by ovplyvnila jeho
+správanie k hráčovi tak že by reagoval priateľký voči nemu pokiaľ je z rovnakej kultúrnej dimenzie.
 
-\begin{itemize}
-	\item Narodnosť
-	\item Postavenie
-	\item Viera
-	\item Minulé skúsenosti
-\end{itemize}
-
-\pagebreak
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.41]{Diagramy/Spravanie.png}
+	\caption{Príklad interakcie hráča s NPC}
+	\label{fig:interaction}
+\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Záver %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -306,9 +253,27 @@ Tento model si zakladá na tom ako sa hráč správa v hernom svete a tým pádo
 okolo neho. Taktiež sme sa sústredili na vytvorenie osobnosti pre nehrateľné postavy aby
 hráča hra zaujala. Osobnosti sa môžu líšiť ale sú v súlade s kultúrnymi dimenziami, proxemikou
 a, úrovňou predsudkov. Týmto vytvárame viac možných interakcií a prekvapujúce výsledky situácií
-v ktorých sa hráč ocitne.
+v ktorých sa hráč ocitne. Túto tému môjho článku som zvolil na základe týchto článkov
+\cite{culturenpc} a \cite{emotions2017npc}
 
-\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%% Vyjadenie k témam na prednáškach %%%%%%%%%%%%%%%%%%%%%%%
+\section{Vyjadenie k témam na prednáškach}
+
+% TODO vyjadriť sa k 3 témam prednášok
+\subsection{Spoločenské súvislosti informatiky}
+
+\paragraph{Spoločenské súvislosti.} 
+
+\subsection{Technológia a ľudia}
+
+\paragraph{Technológia a ľudia.} 
+
+\subsection{Udržateľnosť a etika}
+
+\paragraph{Udržateľnosť a etika.} 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Literatúra %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -316,3 +281,4 @@ v ktorých sa hráč ocitne.
 \bibliographystyle{plain} 
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
